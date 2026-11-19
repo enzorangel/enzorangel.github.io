@@ -1,176 +1,253 @@
 <!DOCTYPE html>
-<html>
-	<head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8"/>
-		<title>Pagina pessoal</title>
-		<link rel="stylesheet" type="text/css" href="estilo.css"/>
-		<link rel="sortcut icon" href="imagens/logo.png" type="image/png"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-        <style type="text/css">
-            .recuo { text-indent:4em;}
-        </style>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo Rangel | Portfólio Acadêmico e Técnico</title>
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/png">
+    
+    <!-- Bulma CSS & Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS customizado corrigido -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
 
-	</head>
-	
-	<body class="has-background-grey-darker">
-        <nav class="navbar is-link" role="navigation" aria-label="main navigation">
-            <div id="navbarBasicExample" class="navbar-menu">
+    <!-- Barra de Navegação Responsiva -->
+    <nav class="navbar custom-navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item has-text-weight-bold" href="#">
+                    Enzo Rangel
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMain" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item has-text-white-ter">
-                        Informações pessoais
-                    </a>
+                    <a class="navbar-item" href="#sobre">Sobre</a>
+                    <a class="navbar-item" href="#artigos">Publicações</a>
+                    <a class="navbar-item" href="#cursos">Cursos e Monitorias</a>
+
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link has-text-white-ter">
-                            Certificados
-                        </a>
+                        <a class="navbar-link">Certificados (PDF)</a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="certificados/document.pdf" target="_blank">
-                                Participação no I ICoBIECT
-                            </a>
-                            <a class="navbar-item" href="certificados/Certificado_Python.pdf" target="_blank">
-                                Introdução ao Python - DIO
-                            </a>
-                            <a class="navbar-item" href="certificados/Programador-WEB.pdf" target="_blank">
-                                Programador WEB IMD/UFRN
-                            </a>
-                            <a class="navbar-item" href="certificados/Certificado_monitoria_PC.pdf" target="_blank">
-                                Monitoria de Pré-Cálculo e Cálculo I
-                            </a>
-                            <a class="navbar-item" href="certificados/Certificado-aulao.pdf" target="_blank">
-                                XXX Aulão Artístico Cultural de Matemática
-                            </a>
-                            <a class="navbar-item" href="certificados/CERTIFICADO_MONITORIA_ENZO RANGEL MONTEIRO DA SILVA.pdf" target="_blank">
-                                Monitoria como apoio e contextualização do ensino das disciplinas de Cálculo 
-                            </a>
-                            <a class="navbar-item" href="certificados/document1.pdf" target="_blank">
-                                Mini curso (I IcoBIECT): O empeendedorismo como ferramenta de transformação
-                            </a>
+                            <a class="navbar-item" href="certificados/document.pdf" target="_blank">Participação no I ICoBIECT</a>
+                            <a class="navbar-item" href="certificados/Certificado_Python.pdf" target="_blank">Introdução ao Python - DIO</a>
+                            <a class="navbar-item" href="certificados/Programador-WEB.pdf" target="_blank">Programador WEB - IMD/UFRN</a>
+                            <a class="navbar-item" href="certificados/Certificado_monitoria_PC.pdf" target="_blank">Monitoria de Pré-Cálculo e Cálculo I</a>
+                            <a class="navbar-item" href="certificados/Certificado-aulao.pdf" target="_blank">XXX Aulão Artístico Cultural de Matemática</a>
+                            <a class="navbar-item" href="certificados/CERTIFICADO_MONITORIA_ENZO RANGEL MONTEIRO DA SILVA.pdf" target="_blank">Monitoria de Apoio ao Ensino de Cálculo</a>
+                            <a class="navbar-item" href="certificados/document1.pdf" target="_blank">Minicurso (I ICoBIECT): Empreendedorismo</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="navbar-end">
-                    <a class="navbar-item is-active">
-                        <img src="imagens/bandeira-do-brasil.png">&ensp; Pt</img>
+                    <div class="navbar-item">
+                        <button id="theme-toggle" class="button is-small is-dark" title="Alternar tema">
+                            <span class="icon"><i id="theme-icon" class="fas fa-sun"></i></span>
+                        </button>
+                    </div>
+                    <a class="navbar-item is-active" href="index.html">
+                        <img src="imagens/bandeira-do-brasil.png" alt="Português" class="flag-icon"> Pt
                     </a>
                     <a class="navbar-item" href="english.html">
-                        <img src="imagens/bandeira.png">&ensp; En</img>
+                        <img src="imagens/bandeira.png" alt="English" class="flag-icon"> En
                     </a>
                 </div>
             </div>
-        </nav>
-        <br>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="section" style="margin-top: 2.5rem;">
         <div class="container">
-            <div class="columns">
-                <div class="column is-one-third tile is-ancestor">
-                    <div class="column">
-                        <div class="card tile is-vertical is-parent notification is-link">
-                            <div class="card-image">
-		                        <img src="imagens/IMG_6969.jpg" width="480" height="300"/>
+            <div class="columns is-variable is-5">
+
+                <!-- Coluna Lateral (Perfil e Ferramentas) -->
+                <aside class="column is-4">
+                    <div class="sidebar-sticky">
+                        <div class="portfolio-card has-text-centered">
+                            <div class="profile-avatar-wrapper">
+                                <img src="imagens/IMG_6969.jpg" alt="Foto de Enzo Rangel Monteiro da Silva" class="profile-avatar">
                             </div>
-                            <div class="content">
-                                <ul class="has-text-white-ter">
-			                        <li>Nome: Enzo Rangel Monteiro da Silva</li>
-			                        <li>Email: enzorangel.m@gmail.com</li>
-			                        <li>Contato: +55 (84) 9 9702-7755</li>
-			                        <li>Linkedin: <a href="https://www.linkedin.com/in/enzo-rangel/" target="_blank" style="color:black; text-decoration:none">@enzo_rangel</a></li> 
-			                        <li>Mora em: Natal - RN</li>
-			                        <li>Idade: Vinte e um (21) anos</li>
-		                        </ul>
-                            </div>
+                            <h1 class="title is-4 mb-1" style="color: var(--text-primary);">Enzo Rangel Monteiro da Silva</h1>
+                            <p class="subtitle is-6 mb-4" style="color: var(--accent);">Engenharia da Computação &bull; Neuroengenharia</p>
+
+                            <ul class="contact-list has-text-left">
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:enzorangel.m@gmail.com">enzorangel.m@gmail.com</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:+5584997027755">+55 (84) 9 9702-7755</a>
+                                </li>
+                                <li>
+                                    <i class="fab fa-linkedin"></i>
+                                    <a href="https://www.linkedin.com/in/enzo-rangel/" target="_blank" rel="noopener">@enzo_rangel</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Natal - RN, Brasil</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="card tile is-vertical is-parent notification is-link">
-                            <div class="content">
-                                <section class="section">
-                                    <h1 class="title has-text-white-ter">Ferramentas:</h1>
-                                    <ul class="has-text-white-ter">
-                                        <li>GNUPLOT</li>
-                                        <li>C, C++, Python, JavaScript e Java</li>
-                                        <li>HTML, CSS, Bulma</li>
-                                        <li>MySQL, SQL</li>
-                                        <li>Sci Davis</li>
-                                        <li>Latex</li>
-                                        <li>Solid Works</li>
-                                    </ul>
-                                </section>
+
+                        <div class="portfolio-card">
+                            <h2 class="section-heading"><i class="fas fa-code"></i> Ferramentas e Tecnologias</h2>
+
+                            <p class="skill-group-title">Linguagens</p>
+                            <div class="tags">
+                                <span class="tag skill-tag">C</span>
+                                <span class="tag skill-tag">C++</span>
+                                <span class="tag skill-tag">Python</span>
+                                <span class="tag skill-tag">JavaScript</span>
+                                <span class="tag skill-tag">Java</span>
+                                <span class="tag skill-tag">SQL</span>
+                            </div>
+
+                            <p class="skill-group-title">Web & Banco de Dados</p>
+                            <div class="tags">
+                                <span class="tag skill-tag">HTML5</span>
+                                <span class="tag skill-tag">CSS3</span>
+                                <span class="tag skill-tag">Bulma</span>
+                                <span class="tag skill-tag">MySQL</span>
+                            </div>
+
+                            <p class="skill-group-title">Científico & CAD</p>
+                            <div class="tags">
+                                <span class="tag skill-tag">LaTeX</span>
+                                <span class="tag skill-tag">GNUPLOT</span>
+                                <span class="tag skill-tag">SciDAVis</span>
+                                <span class="tag skill-tag">SolidWorks</span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="column tile is-ancestor">
-                    <div class="tile is-vertical is-parent">
-                        <div class="tile is-child notification is-link">
-                            <section class="section">
-		                        <h1 class="title has-text-white-ter">Experiências: </h1>
-		                        <p class="recuo has-text-justified has-text-white-ter">Conclui o ensino médio em dois mil e dezoito (2018) e ingressei
-                                 no curso Interdisciplinar em Ciências e Tecnologias (C&T) na Universidade Federal do Rio Grande do
-                                 Norte (UFRN) em dois mil e dezenove (2019) e conclui em dois mil e vinte dois (2022), atualmente sou bacharelando do
-                                  curso de Engenharia da Computação na UFRN e também sou mestrando no Programa de Pós Graduação em Neuroengenharia pelo
-                                   Instituto Internacional de Neurociências Edmond e Lily Safra, Instituto Santos Dumont, Macaíba, Brasil, sob orientação 
-                                   de Dr. André Felipe Oliveira de Azevedo Dantas. Fui monitor bolsista/voluntário 
-                                 das seguintes disciplinas: Pré-Cálculo, Cálculo 1, Vetores e Geometria Analítica e Algebra Linear. Sou bolsista de 
-                                 iniciação científica (IC) a dois anos e meio, atualmente bolsista com o professor Dr Josinaldo Menezes da Silva, onde estudamos dinâmicas populacionais 
-                                 por meio de simulações computacionais, cujo indivíduos são aptos a tomar decisões e interagir de forma inteligente.
-                                </p>
-                            </section>
+                </aside>
+
+                <!-- Coluna Principal (Trajetória, Artigos e Cursos) -->
+                <div class="column is-8">
+
+                    <!-- Sobre / Experiências -->
+                    <section id="sobre" class="portfolio-card">
+                        <h2 class="section-heading"><i class="fas fa-user-graduate"></i> Trajetória Acadêmica e Pesquisa</h2>
+                        <div class="bio-text">
+                            <p class="mb-3">
+                                Graduado no Bacharelado Interdisciplinar em <strong>Ciências e Tecnologia (C&amp;T)</strong> pela Universidade Federal do Rio Grande do Norte (UFRN, 2019–2022), atualmente sou graduando em <strong>Engenharia da Computação</strong> na UFRN e mestrando no <strong>Programa de Pós-Graduação em Neuroengenharia</strong> pelo Instituto Internacional de Neurociências Edmond e Lily Safra (Instituto Santos Dumont, Macaíba/RN), sob orientação do <strong>Dr. André Felipe Oliveira de Azevedo Dantas</strong>.
+                            </p>
+                            <p class="mb-3">
+                                Atuei por dois anos e meio como bolsista de <strong>Iniciação Científica (IC)</strong> sob orientação do <strong>Prof. Dr. Josinaldo Menezes da Silva</strong>, investigando dinâmicas populacionais por meio de simulações computacionais com agentes capazes de tomar decisões e interagir de forma adaptativa.
+                            </p>
+                            <p>
+                                Na área de ensino, atuei como monitor bolsista e voluntário nas disciplinas de <strong>Pré-Cálculo</strong>, <strong>Cálculo I</strong>, <strong>Vetores e Geometria Analítica</strong> e <strong>Álgebra Linear</strong>.
+                            </p>
                         </div>
-                        <div class="tile is-child notification is-link">
-                            <section class="section">
-                                <div class="content">
-    		                        <h1 class="title has-text-white-ter">Cursos, projetos de extensão e monitorias:</h1>
-	    	                        <ul class="has-text-white-ter">
-                                        <li>Participação no I ICoBIECT</li>
-		                	            <li>Introdução ao Python - DIO</li>
-                                        <li>Programador WEB IMD/UFRN</li>
-                                        <li>Programador Dispositivos Movéis IMD/UFRN</li>
-                                        <li>Monitoria de Pré-Cálculo e Cálculo I</li>
-                                        <li>XXX Aulão Artístico Cultural de Matemática</li>
-			                            <li>Monitoria como apoio e contextualização do ensino das disciplinas de Cálculo</li>
-                                        <li>Mini curso (I IcoBIECT): O empeendedorismo como ferramenta de transformação</li>
-		                            </ul>
-                                </div>
-                                <br>
-                            </section>
-                        </div>
-                        <div class="tile is-child notification is-link">
-                            <section class="section">
-                                <div class="content">
-    		                        <h1 class="title has-text-white-ter">Artigos publicados:</h1>
-	    	                        <ul class="has-text-white-ter">
-                                        <li><a href="https://www.sciencedirect.com/science/article/pii/S0303264722000764?via%3Dihub" target="_blank">
-                                            Combination of survival movement strategies in cyclic game systems duringan epidemic
-                                        </a></li>
-		                	            <li><a href="https://www.sciencedirect.com/science/article/pii/S1574954122000553" target="_blank">
-                                            Aggregation as an antipredator strategy in the rock-paper-scissors model
-                                        </a></li>
-                                        <li><a href="https://doi.org/10.1016/j.chaos.2022.112430" target="_blank">
-                                            Adaptive movement strategy in rock-paper-scissors models
-                                        </a></li>
-                                        <li><a href="https://iopscience.iop.org/article/10.1209/0295-5075/ac817a/meta" target="_blank">
-                                            Adaptive movement strategy may promote biodiversity in the rock-paper-scissors model
-                                        </a></li>
-                                        <li><a href="https://www.sciencedirect.com/science/article/pii/S0303264722001587?via%3Dihub" target="_blank">
-                                            Spatial organisation plasticity reduces disease infection risk in rock–paper–scissors models
-                                        </a></li>
-                                        <li><a href="https://iopscience.iop.org/article/10.1088/2632-072X/aca251" target="_blank">
-                                            Adaptive survival movement strategy to local epidemic outbreaks in cyclic models
-                                        </a></li>
-                                        <li><a href="https://iopscience.iop.org/article/10.1209/0295-5075/aca354" target="_blank">
-                                            Adaptive altruistic strategy in cyclic models during an epidemic
-                                        </a></li>
-		                            </ul>
-                                </div>
-                                <br>
-                            </section>
-                        </div>
-                    </div>
+                    </section>
+
+                    <!-- Artigos Publicados -->
+                    <section id="artigos" class="portfolio-card">
+                        <h2 class="section-heading"><i class="fas fa-book-open"></i> Artigos Publicados (7)</h2>
+
+                        <a class="article-item" href="https://www.sciencedirect.com/science/article/pii/S0303264722000764?via%3Dihub" target="_blank" rel="noopener">
+                            <span class="article-title">Combination of survival movement strategies in cyclic game systems during an epidemic <i class="fas fa-external-link-alt is-size-7 ml-1"></i></span>
+                            <span class="article-meta">BioSystems &bull; ScienceDirect</span>
+                        </a>
+
+                        <a class="article-item" href="https://www.sciencedirect.com/science/article/pii/S1574954122000553" target="_blank" rel="noopener">
+                            <span class="article-title">Aggregation as an antipredator strategy in the rock-paper-scissors model <i class="fas fa-external-link-alt is-size-7 ml-1"></i></span>
+                            <span class="article-meta">Ecological Informatics &bull; ScienceDirect</span>
+                        </a>
+
+                        <a class="article-item" href="https://doi.org/10.1016/j.chaos.2022.112430" target="_blank" rel="noopener">
+                            <span class="article-title">Adaptive movement strategy in rock-paper-scissors models <i class="fas fa-external-link-alt is-size-7 ml-1"></i></span>
+                            <span class="article-meta">Chaos, Solitons &amp; Fractals &bull; Elsevier</span>
+                        </a>
+
+                        <a class="article-item" href="https://iopscience.iop.org/article/10.1209/0295-5075/ac817a/meta" target="_blank" rel="noopener">
+                            <span class="article-title">Adaptive movement strategy may promote biodiversity in the rock-paper-scissors model <i class="fas fa-external-link-alt is-size-7 ml-1"></i></span>
+                            <span class="article-meta">Europhysics Letters (EPL) &bull; IOPscience</span>
+                        </a>
+
+                        <a class="article-item" href="https://www.sciencedirect.com/science/article/pii/S0303264722001587?via%3Dihub" target="_blank" rel="noopener">
+                            <span class="article-title">Spatial organisation plasticity reduces disease infection risk in rock–paper–scissors models <i class="fas fa-external-link-alt is-size-7 ml-1"></i></span>
+                            <span class="article-meta">BioSystems &bull; ScienceDirect</span>
+                        </a>
+
+                        <a class="article-item" href="https://iopscience.iop.org/article/10.1088/2632-072X/aca251" target="_blank" rel="noopener">
+                            <span class="article-title">Adaptive survival movement strategy to local epidemic outbreaks in cyclic models <i class="fas fa-external-link-alt is-size-7 ml-1"></i></span>
+                            <span class="article-meta">Journal of Physics: Complexity &bull; IOPscience</span>
+                        </a>
+
+                        <a class="article-item" href="https://iopscience.iop.org/article/10.1209/0295-5075/aca354" target="_blank" rel="noopener">
+                            <span class="article-title">Adaptive altruistic strategy in cyclic models during an epidemic <i class="fas fa-external-link-alt is-size-7 ml-1"></i></span>
+                            <span class="article-meta">Europhysics Letters (EPL) &bull; IOPscience</span>
+                        </a>
+                    </section>
+
+                    <!-- Cursos, Extensão e Monitorias -->
+                    <section id="cursos" class="portfolio-card">
+                        <h2 class="section-heading"><i class="fas fa-certificate"></i> Cursos, Extensão e Monitorias</h2>
+                        <ul class="experience-list">
+                            <li>
+                                <span>Programador WEB &mdash; IMD/UFRN</span>
+                                <a href="certificados/Programador-WEB.pdf" target="_blank" class="tag is-link is-light">Certificado</a>
+                            </li>
+                            <li>
+                                <span>Programador de Dispositivos Móveis &mdash; IMD/UFRN</span>
+                            </li>
+                            <li>
+                                <span>Introdução ao Python &mdash; DIO</span>
+                                <a href="certificados/Certificado_Python.pdf" target="_blank" class="tag is-link is-light">Certificado</a>
+                            </li>
+                            <li>
+                                <span>Monitoria de Pré-Cálculo e Cálculo I</span>
+                                <a href="certificados/Certificado_monitoria_PC.pdf" target="_blank" class="tag is-link is-light">Certificado</a>
+                            </li>
+                            <li>
+                                <span>Monitoria como apoio e contextualização do ensino das disciplinas de Cálculo</span>
+                                <a href="certificados/CERTIFICADO_MONITORIA_ENZO RANGEL MONTEIRO DA SILVA.pdf" target="_blank" class="tag is-link is-light">Certificado</a>
+                            </li>
+                            <li>
+                                <span>Participação no I ICoBIECT</span>
+                                <a href="certificados/document.pdf" target="_blank" class="tag is-link is-light">Certificado</a>
+                            </li>
+                            <li>
+                                <span>Minicurso (I ICoBIECT): O empreendedorismo como ferramenta de transformação</span>
+                                <a href="certificados/document1.pdf" target="_blank" class="tag is-link is-light">Certificado</a>
+                            </li>
+                            <li>
+                                <span>XXX Aulão Artístico Cultural de Matemática</span>
+                                <a href="certificados/Certificado-aulao.pdf" target="_blank" class="tag is-link is-light">Certificado</a>
+                            </li>
+                        </ul>
+                    </section>
+
                 </div>
             </div>
         </div>
-        <br>
-        <div class="container">
-            <div><img src="imagens/bandeira.png" width="20" height="20"/>&ensp;Ícones feitos por <a href="https://www.flaticon.com/br/autores/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
-            <div><img src="imagens/bandeira-do-brasil.png" width="20" height="20"/>&ensp;Ícones feitos por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="portfolio-footer">
+        <div class="container has-text-centered">
+            <p class="mb-1">
+                <img src="imagens/bandeira.png" alt="Ícone bandeira EUA" width="16" height="16"> Ícones feitos por <a href="https://www.flaticon.com/br/autores/vitaly-gorbachev" target="_blank" rel="noopener">Vitaly Gorbachev</a> e
+                <img src="imagens/bandeira-do-brasil.png" alt="Ícone bandeira Brasil" width="16" height="16"> <a href="https://www.freepik.com" target="_blank" rel="noopener">Freepik</a> via <a href="https://www.flaticon.com/br/" target="_blank" rel="noopener">Flaticon</a>.
+            </p>
         </div>
-    </body>
-</html> 
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
